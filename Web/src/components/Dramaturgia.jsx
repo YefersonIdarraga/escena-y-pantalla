@@ -6,7 +6,9 @@ const Dramaturgia = () => {
     <section>
         <NavBar />
         <section className='container'>
-          Dramaturgia
+            <section className='subcontainer'>   
+              Dramaturgia
+            </section>
         </section>
     </section>
   )

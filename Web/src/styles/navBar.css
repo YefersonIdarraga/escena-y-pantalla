@@ -43,7 +43,6 @@
 
 .menu-element a.active{
     border-bottom: 1px solid var(--text);
-    color: var(--text);
 }
 
 .menu-element a:hover{

@@ -8,6 +8,9 @@ const Home = () => {
         <NavBar />
         <section className='container'>
           <Carousel />
+          <section className='subcontainer'>   
+              Home
+          </section>
         </section>
     </section>
   )

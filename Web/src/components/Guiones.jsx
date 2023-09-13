@@ -6,7 +6,9 @@ const Guiones = () => {
     <section>
         <NavBar />
         <section className='container'>
-          Guiones
+          <section className='subcontainer'>   
+              Guiones
+          </section>
         </section>
     </section>
   )

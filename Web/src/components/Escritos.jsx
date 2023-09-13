@@ -1,12 +1,16 @@
 import React from 'react'
 import NavBar from '../helpers/NavBar'
+import LateralMenu from './LateralMenu'
 
 const Escritos = () => {
   return (
     <section>
         <NavBar />
         <section className='container'>
-          Escritos
+          <LateralMenu />
+          <section className='subcontainer'>
+            Escritos
+          </section>
         </section>
     </section>
   )

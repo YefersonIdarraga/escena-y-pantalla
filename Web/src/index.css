@@ -22,3 +22,8 @@ body{
 .container{
   margin-top: 40px;
 }
+
+.subcontainer{
+  width: 86%;
+  float: right;
+}

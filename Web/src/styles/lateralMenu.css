@@ -1,0 +1,45 @@
+.lateralMenu{
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 200px;
+    margin-top: 10%;
+    background: var(--primary);
+    border-radius: 0px 10px 10px 0px;
+    padding: 10px;
+    padding-right: 40px;
+    transform: translateX(-150px);
+    transition: .3s;
+}
+
+.lateralMenu:hover{
+    transform: translateX(0px);
+}
+
+.lm-element{
+
+}
+
+.lm-element a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 1px black;
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+
+.lm-element a:hover{
+    text-shadow: 1px 1px 5px gray;
+}
+
+.lateralMenu a.active{
+    border-bottom: 1px solid var(--text);
+}
+
+.bi-arrow-bar-right{
+    position: absolute;
+    left: 80%;
+    color: white;
+    font-size: 30px;
+}
