@@ -15,10 +15,19 @@
 
 .lateralMenu:hover{
     transform: translateX(0px);
+    background: var(--accent);
 }
 
-.lm-element{
+.bi-arrow-bar-right{
+    position: absolute;
+    left: 80%;
+    color: white;
+    font-size: 30px;
+    transition: .3s;
+}
 
+.lateralMenu:hover>.bi-arrow-bar-right{
+    transform: rotate3d(0, 1, 0, 180deg);
 }
 
 .lm-element a{
@@ -34,12 +43,5 @@
 }
 
 .lateralMenu a.active{
-    border-bottom: 1px solid var(--text);
-}
-
-.bi-arrow-bar-right{
-    position: absolute;
-    left: 80%;
-    color: white;
-    font-size: 30px;
+    border-bottom: 1px solid white;
 }

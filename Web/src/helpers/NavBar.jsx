@@ -23,24 +23,33 @@ const NavBar = () => {
         }
     }
 
+    const [menuOpen, setMenuOpen] = useState(false);
+
+    const toggleMenu = () => {
+        setMenuOpen(!menuOpen);
+    };
+
   return (
-    <nav className='menu'>
+    <nav className={`menu ${menuOpen ? 'open' : ''}`}>
+         <section className='menu-button' onClick={toggleMenu}>
+        <i className={`bi bi-list ${menuOpen ? 'open' : ''}`}></i>
+      </section>
         <section className='logo'>
             <img src={rollo} alt="" />
             <h1>Escena y Pantalla</h1>
         </section>
-        <section className='menu-elements'>
+        <section className={`menu-elements ${menuOpen ? 'open' : ''}`}>
             <section className='menu-element'>
-                <NavLink to={'/'}>Home</NavLink>
+                <NavLink to={'/'} onClick={toggleMenu}>Home</NavLink>
             </section>
             <section className='menu-element'>
-                <NavLink to={'/dramaturgia'}>Dramaturgia</NavLink>
+                <NavLink to={'/dramaturgia'} onClick={toggleMenu}>Dramaturgia</NavLink>
             </section>
             <section className='menu-element'>
-                <NavLink to={'/guiones'}>Guiones</NavLink>
+                <NavLink to={'/guiones'} onClick={toggleMenu}>Guiones</NavLink>
             </section>
             <section className='menu-element'>
-                <NavLink to={'/escritos'}>Escritos</NavLink>
+                <NavLink to={'/escritos'} onClick={toggleMenu}>Escritos</NavLink>
             </section>
         </section>
         <section className='search'>

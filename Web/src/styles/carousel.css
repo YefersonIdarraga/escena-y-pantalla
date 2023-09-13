@@ -34,4 +34,13 @@
   .carousel-button:hover {
     color: var(--accent);
   }
+
+  @media (max-width: 479px) {
+    .carousel{
+      height: 300px;
+    }
+    .btn-next{
+      left: 89%;
+    }
+  }
   
