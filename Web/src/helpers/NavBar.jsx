@@ -1,21 +1,34 @@
-import React from 'react'
+import React, { useState, useRef } from 'react'
 import { NavLink } from 'react-router-dom'
 import '../styles/navBar.css'
-import { useEffect, useState, useRef } from 'react'
+import rollo from '../assets/images/rollo-de-pelicula.png'
 
 const NavBar = () => {
     const [ search, setSearch ] = useState('')
+    const [ searchTxt, setSearchTxt ] = useState('')
 
     const inputRef = useRef(null)
 
     const handleSearch = () => {
-        setSearch('searchActive');
+        setSearch(search == 'searchActive' ? '' : 'searchActive');
+        setSearchTxt(searchTxt == 'searchTxtActive' ? '' : 'searchTxtActive')
         if (inputRef.current) {
             inputRef.current.focus();
         }
     }
+
+    const handleKeyUp = (e) => {
+        if (e.keyCode === 13) {
+            setSearch('')
+        }
+    }
+
   return (
     <nav className='menu'>
+        <section className='logo'>
+            <img src={rollo} alt="" />
+            <h1>Escena y Pantalla</h1>
+        </section>
         <section className='menu-elements'>
             <section className='menu-element'>
                 <NavLink to={'/'}>Home</NavLink>
@@ -31,8 +44,10 @@ const NavBar = () => {
             </section>
         </section>
         <section className='search'>
-            <i class="bi bi-search" onClick={handleSearch}></i>
-            <input className={`searchinp ${search}`} onBlur={() => setSearch('')} ref={inputRef} type="search" />
+            <div title='Buscar'>
+                <i className="bi bi-search" onClick={handleSearch}></i>
+            </div>
+            <input className={`searchinp ${search}`} onKeyUp={handleKeyUp} ref={inputRef} placeholder='Buscar' type="search" />
         </section>
     </nav>
   )

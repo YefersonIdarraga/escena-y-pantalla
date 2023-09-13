@@ -6,3 +6,19 @@
   box-sizing: border-box;
   font-family: 'Roboto', sans-serif;
 }
+
+#root{
+  --text: #011918;
+  --background: #f5ffff;
+  --primary: #ae0407;
+  --secondary: #fdfcbe;
+  --accent: #ea060a;
+}
+
+body{
+  background: var(--background);
+}
+
+.container{
+  margin-top: 40px;
+}

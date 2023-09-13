@@ -4,11 +4,27 @@
     justify-content: space-evenly;
     width: 100%;
     height: 60px;
-    background: gray;
+    padding-top: 20px;
+}
+
+.logo{
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.logo img{
+    width: 20%;
+}
+
+.logo h1{
+    color: var(--primary);
+    font-size: 25px;
 }
 
 .menu-elements{
-    width: 80%;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: space-evenly;
@@ -20,24 +36,34 @@
 
 .menu-element a{
     text-decoration: none;
-    color: black;
-    font-size: 1.3rem;
-    font-weight: 700;
+    color: var(--text);
+    font-size: 1.1rem;
+    font-weight: 500;
 }
 
 .menu-element a.active{
-    text-decoration: underline white;
-    color: white;
+    border-bottom: 1px solid var(--text);
+    color: var(--text);
 }
 
 .menu-element a:hover{
-    color: white;
+    text-shadow: 1px 1px 5px gray;
 }
 
 .search{
     width: 15%;
     display: flex;
     align-items: center;
+}
+
+.search div{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background: var(--primary);
+    padding: 5px;
+    border-radius: 10px;
+    margin-right: 10px;
 }
 
 .searchinp{
@@ -62,7 +88,7 @@
 
 .bi-search{
     font-size: 25px;
-    margin-right: 10px;
+    color: white;
     text-shadow: 2px 2px 2px black;
     cursor: pointer;
 }

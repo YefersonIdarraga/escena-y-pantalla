@@ -5,7 +5,9 @@ const Escritos = () => {
   return (
     <section>
         <NavBar />
-        Escritos
+        <section className='container'>
+          Escritos
+        </section>
     </section>
   )
 }

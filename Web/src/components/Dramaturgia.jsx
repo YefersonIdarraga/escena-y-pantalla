@@ -5,7 +5,9 @@ const Dramaturgia = () => {
   return (
     <section>
         <NavBar />
-        Dramaturgia
+        <section className='container'>
+          Dramaturgia
+        </section>
     </section>
   )
 }
